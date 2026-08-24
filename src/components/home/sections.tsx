@@ -94,7 +94,7 @@ export function Hero() {
         </div>
 
         <div className="relative flex justify-center lg:justify-end">
-          <div className="relative grid place-items-center">
+          <div className="relative grid place-items-center lg:-translate-y-28">
             <Cube size={340} />
             {[
               { r: 150, d: "24s" },
