@@ -95,10 +95,6 @@ export function Hero() {
 
         <div className="relative flex justify-center lg:justify-end">
           <div className="relative grid place-items-center">
-            <div
-              className="animate-halo absolute h-64 w-64 rounded-full blur-3xl sm:h-80 sm:w-80"
-              style={{ background: "var(--gradient-primary)", opacity: 0.06 }}
-            />
             <Cube size={260} />
             {[
               { r: 150, d: "24s" },
