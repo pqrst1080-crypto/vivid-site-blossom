@@ -1,24 +1,49 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useReveal } from "@/hooks/use-reveal";
+import { SiteHeader } from "@/components/home/site-header";
+import {
+  Cta,
+  Faq,
+  FocusMarquee,
+  Hero,
+  Product,
+  Security,
+  SiteFooter,
+  Why,
+} from "@/components/home/sections";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const TITLE = "2Cube AI — Geometry of Infinite Intelligence";
+const DESCRIPTION =
+  "2Cube AI builds responsible, privacy-first AI products that empower people, automate work, and help modern businesses scale from pilot to production.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
+  useReveal();
+
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="relative min-h-screen">
+      <SiteHeader />
+      <Hero />
+      <FocusMarquee />
+      <Product />
+      <Why />
+      <Security />
+      <Faq />
+      <Cta />
+      <SiteFooter />
+    </main>
   );
 }
