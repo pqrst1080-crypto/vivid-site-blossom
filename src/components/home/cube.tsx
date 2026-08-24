@@ -4,17 +4,22 @@ import heroVideo from "@/assets/home_anim.mp4.asset.json";
 export function Cube({ size = 168 }: { size?: number }) {
   return (
     <div
-      className="relative overflow-hidden rounded-3xl border border-primary/25"
+      className="relative"
       style={{
         width: size * 2,
         maxWidth: "100%",
         aspectRatio: "16 / 9",
-        boxShadow: "var(--shadow-soft)",
       }}
       aria-hidden="true"
     >
       <video
-        className="h-full w-full object-cover"
+        className="h-full w-full object-cover mix-blend-multiply dark:mix-blend-screen"
+        style={{
+          maskImage:
+            "radial-gradient(ellipse 72% 72% at 50% 50%, #000 45%, transparent 100%)",
+          WebkitMaskImage:
+            "radial-gradient(ellipse 72% 72% at 50% 50%, #000 45%, transparent 100%)",
+        }}
         src={heroVideo.url}
         autoPlay
         loop
