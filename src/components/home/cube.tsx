@@ -16,9 +16,9 @@ export function Cube({ size = 168 }: { size?: number }) {
         className="h-full w-full object-cover mix-blend-multiply dark:mix-blend-screen"
         style={{
           maskImage:
-            "radial-gradient(ellipse 72% 72% at 50% 50%, #000 45%, transparent 100%)",
+            "radial-gradient(ellipse 78% 78% at 50% 50%, #000 62%, transparent 100%)",
           WebkitMaskImage:
-            "radial-gradient(ellipse 72% 72% at 50% 50%, #000 45%, transparent 100%)",
+            "radial-gradient(ellipse 78% 78% at 50% 50%, #000 62%, transparent 100%)",
         }}
         src={heroVideo.url}
         autoPlay
