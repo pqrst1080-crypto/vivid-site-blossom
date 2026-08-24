@@ -99,7 +99,7 @@ export function Hero() {
               className="animate-halo absolute h-64 w-64 rounded-full blur-3xl sm:h-80 sm:w-80"
               style={{ background: "var(--gradient-primary)", opacity: 0.25 }}
             />
-            <Cube />
+            <Cube size={260} />
             {[
               { r: 150, d: "24s" },
               { r: 190, d: "34s" },
