@@ -1,4 +1,4 @@
-import heroVideo from "@/assets/home_anim.mp4.asset.json";
+import heroVideo from "@/assets/home_anim.webm";
 
 /** Looping hero motion mark. */
 export function Cube({ size = 168 }: { size?: number }) {
