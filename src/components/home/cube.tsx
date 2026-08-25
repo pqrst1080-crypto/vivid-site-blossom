@@ -4,7 +4,7 @@ import heroVideo from "@/assets/home_anim.mp4.asset.json";
 export function Cube({ size = 168 }: { size?: number }) {
   return (
     <div
-      className="relative"
+      className="relative mix-blend-multiply dark:mix-blend-screen"
       style={{
         width: size * 2,
         maxWidth: "100%",
@@ -13,7 +13,7 @@ export function Cube({ size = 168 }: { size?: number }) {
       aria-hidden="true"
     >
       <video
-        className="h-full w-full object-cover mix-blend-multiply dark:mix-blend-screen"
+        className="h-full w-full object-cover"
         style={{
           maskImage:
             "radial-gradient(ellipse 78% 78% at 50% 50%, #000 62%, transparent 100%)",
